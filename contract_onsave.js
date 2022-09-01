@@ -33,7 +33,7 @@ var Sdk = window.Sdk || {};
 
 
 
-    var setRepairId = function(executionContext, dateString) {
+    this.setRepairId = function(executionContext, dateString) {
         return Xrm.WebApi.retrieveMultipleRecords("new_repaircontract", "?$select=new_contract&$filter=startswith(new_contract,'$dateString') and statecode eq 0&$orderby=new_contract desc".replace("$dateString", dateString)).then(
             function success(result) {
                 var finalDatestring = dateString;
