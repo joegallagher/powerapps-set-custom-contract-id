@@ -1,4 +1,4 @@
-var contractLibrary = window.Sdk || {};
+var Sdk = window.Sdk || {};
 
 (function () {
 
@@ -89,4 +89,4 @@ var contractLibrary = window.Sdk || {};
         );
     }
 
-}).call(contractLibrary);
+}).call(Sdk);
